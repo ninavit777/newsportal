@@ -6,12 +6,13 @@ class Comments{
 		CURRENT_TIMESTAMP)";
 		$db = new Database();
 		$g = $db->executeRun($query);
+		echo $query;
 		return $g;
 }
 
 
 	public static function getCommentByNewsID($id) {
-		$query = "SELECT * FROM comments WHERE news_id=".(string)$id."ORDER BY id DESC";
+		$query = "SELECT * FROM comments WHERE news_id=".(string)$id." ORDER BY id DESC";
 		$db = new Database();
 		$arr = $db->getAll($query);
 		return $arr;

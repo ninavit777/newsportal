@@ -23,11 +23,12 @@ else{
 $_SESSION['errorString']='Неправильное имя пользователя или пароль';
 include_once ('veiwAdmin/formLogin.php');
 }
+}
 
 
 //  выход  из админ панели
 
-public static  function logoutAction(); {
+public static  function logoutAction() {
 
 modelAdmin::userLogout();
 
@@ -41,7 +42,7 @@ public static function error404() {
 
 include_once ('veiwAdmin/error404.php');
 }
-}
+
 
 } //end class
 

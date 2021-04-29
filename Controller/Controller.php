@@ -34,6 +34,7 @@ class Controller {
 	}
 
 	public static function InsertComment($c,$id) {
+		echo "YES";
 		Comments::InsertComment($c,$id);
 	//self::NewsById($id);
 	header('Location:news?id='.$id.'#ctable');
